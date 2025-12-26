@@ -3,10 +3,10 @@ const artData = [
     {
         id: 1,
         title: "Bluebird Haven",
-        artist: "Elena Rodriguez",
+        artist: "Krissha Pearl Dela Peña",
         category: "wildlife",
         image: "assets/images/art-1.jpg",
-        medium: "Oil on Canvas",
+        medium: "Acrylic on Canvas",
         year: "2024",
         dimensions: "36\" x 48\"",
         price: "$3,200",
@@ -16,7 +16,7 @@ const artData = [
     {
         id: 2,
         title: "Birds of Harmony",
-        artist: "Marcus Chen",
+        artist: "Krissha Pearl Dela Peña",
         category: "wildlife",
         image: "assets/images/art-2.jpg",
         medium: "Acrylic on Canvas",
@@ -29,10 +29,10 @@ const artData = [
     {
         id: 3,
         title: "Pink Rose Trio",
-        artist: "Sarah Williams",
+        artist: "Krissha Pearl Dela Peña",
         category: "floral",
         image: "assets/images/art-3.jpg",
-        medium: "Mixed Media",
+        medium: "Acrylic on Canvas",
         year: "2024",
         dimensions: "30\" x 40\"",
         price: "$2,500",
@@ -42,10 +42,10 @@ const artData = [
     {
         id: 4,
         title: "Tulip Glow",
-        artist: "David Kim",
+        artist: "Krissha Pearl Dela Peña",
         category: "floral",
         image: "assets/images/art-4.jpg",
-        medium: "Bronze",
+        medium: "Acrylic on Canvas",
         year: "2023",
         dimensions: "18\" x 12\" x 8\"",
         price: "$4,500",
@@ -55,10 +55,10 @@ const artData = [
     {
         id: 5,
         title: "Garden Songbirds",
-        artist: "Lisa Thompson",
+        artist: "Krissha Pearl Dela Peña",
         category: "wildlife",
         image: "assets/images/art-5.jpg",
-        medium: "Watercolor",
+        medium: "Acrylic on Canvas",
         year: "2024",
         dimensions: "22\" x 30\"",
         price: "$1,800",
@@ -68,8 +68,8 @@ const artData = [
     {
         id: 6,
         title: "Riverside Serenity",
-        artist: "Alex Rivera",
-        category: "landscape",
+        artist: "Krissha Pearl Dela Peña",
+        category: "Acrylic on Canvas",
         image: "assets/images/art-6.jpg",
         medium: "Digital Photography",
         year: "2024",
@@ -81,10 +81,10 @@ const artData = [
     {
         id: 7,
         title: "Valley of Falls",
-        artist: "Maria Gonzalez",
+        artist: "Krissha Pearl Dela Peña",
         category: "landscape",
         image: "assets/images/art-7.jpg",
-        medium: "Oil on Canvas",
+        medium: "Acrylic on Canvas",
         year: "2023",
         dimensions: "48\" x 60\"",
         price: "$5,200",
@@ -94,10 +94,10 @@ const artData = [
     {
         id: 8,
         title: "Crowned Pair",
-        artist: "Jordan Park",
+        artist: "Krissha Pearl Dela Peña",
         category: "wildlife",
         image: "assets/images/art-8.jpg",
-        medium: "Mixed Media Installation",
+        medium: "Acrylic on Canvas",
         year: "2024",
         dimensions: "Variable",
         price: "$8,500",
@@ -107,7 +107,7 @@ const artData = [
     {
         id: 9,
         title: "Red Rose Beauty",
-        artist: "Robert Lee",
+        artist: "Krissha Pearl Dela Peña",
         category: "floral",
         image: "assets/images/art-9.jpg",
         medium: "Acrylic on Canvas",
@@ -120,42 +120,17 @@ const artData = [
     {
         id: 10,
         title: "Lotus Calm",
-        artist: "Anna Foster",
+        artist: "Krissha Pearl Dela Peña",
         category: "floral",
         image: "assets/images/art-10.jpg",
-        medium: "Ceramic",
+        medium: "Acrylic on Canvas",
         year: "2023",
         dimensions: "14\" x 10\" x 10\"",
         price: "$850",
         description: "Pink lotus flowers and buds rise gently above broad green leaves in a calm, natural setting.",
         availability: "sold" // "available" | "sold"
-    },
-    {
-        id: 11,
-        title: "Mountain Vista",
-        artist: "Tom Anderson",
-        category: "landscape",
-        image: "assets/images/art-11.jpg",
-        medium: "Oil on Canvas",
-        year: "2024",
-        dimensions: "30\" x 45\"",
-        price: "$3,800",
-        description: "A breathtaking landscape painting that captures the majesty of mountain ranges. The atmospheric perspective creates depth and grandeur.",
-        availability: "sold" // "available" | "sold"
-    },
-    {
-        id: 12,
-        title: "Street Photography",
-        artist: "Nina Patel",
-        category: "photography",
-        image: "assets/images/art-12.jpg",
-        medium: "Black & White Photography",
-        year: "2024",
-        dimensions: "16\" x 24\"",
-        price: "$950",
-        description: "A compelling street photograph that captures a moment of human connection. The black and white treatment emphasizes emotion and composition.",
-        availability: "sold" // "available" | "sold"
     }
+
 ];
 
 // DOM elements
