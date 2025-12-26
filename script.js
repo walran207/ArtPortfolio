@@ -133,6 +133,14 @@ const artData = [
 
 ];
 
+// Sort the artData array to show 'available' items first, then 'sold' items, as requested by the user.
+artData.sort((a, b) => {
+    const statusOrder = { "available": 0, "sold": 1 };
+    const aStatus = statusOrder[a.availability] || 99;
+    const bStatus = statusOrder[b.availability] || 99;
+    return aStatus - bStatus;
+});
+
 // DOM elements
 const galleryGrid = document.getElementById("galleryGrid");
 const filterButtons = document.querySelectorAll(".filter-btn");
