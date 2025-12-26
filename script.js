@@ -89,7 +89,7 @@ const artData = [
         dimensions: "48\" x 60\"",
         price: "$5,200",
         description: "A scenic landscape of rolling fields, waterfalls, and mountains under dramatic skies.",
-        availability: "sold" // "available" | "sold"
+        availability: "available" // "available" | "sold"
     },
     {
         id: 8,
