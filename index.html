@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Portfolio - Contemporary Collection</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Kring's Art Portfolio</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="#artist" class="nav-link">Artist</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch" for="checkbox">
+                    <input type="checkbox" id="checkbox" />
+                    <div class="slider round">
+                        <i class="fas fa-sun sun-icon"></i>
+                        <i class="fas fa-moon moon-icon"></i>
+                    </div>
+                </label>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Carousel -->
+    <section id="home" class="hero">
+        <div class="carousel-container">
+            <div class="carousel-slide">
+                <img src="assets/images/carousel-1.jpg" alt="Art 1">
+                <div class="hero-content">
+                    <h1 class="hero-title">Our Collection</h1>
+                    <p class="hero-subtitle">Explore our curated selection of Landscape and Variety artworks.</p>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="assets/images/carousel-2.jpg" alt="Art 2">
+                <div class="hero-content">
+                    <h1 class="hero-title">Discover New Art</h1>
+                    <p class="hero-subtitle">Immerse yourself in a world of creativity and inspiration</p>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="assets/images/carousel-3.jpg" alt="Art 3">
+                <div class="hero-content">
+                    <h1 class="hero-title">Unique Perspectives</h1>
+                    <p class="hero-subtitle">Showcasing diverse voices and artistic expressions</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-btn prev" aria-label="Previous slide">&#10094;</button>
+        <button class="carousel-btn next" aria-label="Next slide">&#10095;</button>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <!-- Filter Buttons -->
+            <div class="filter-container">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="contemporary">Contemporary</button>
+                <button class="filter-btn" data-filter="abstract">Abstract</button>
+                <button class="filter-btn" data-filter="sculpture">Sculpture</button>
+                <button class="filter-btn" data-filter="photography">Photography</button>
+                <button class="filter-btn" data-filter="landscape">Landscape</button>
+                <button class="filter-btn" data-filter="classical">Classical</button>
+                <button class="filter-btn" data-filter="installation">Installation</button>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="gallery-grid" id="galleryGrid">
+                <!-- Art pieces will be dynamically loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Artist Section -->
+    <section id="artist" class="artist-section">
+        <div class="container">
+            <div class="artist-content">
+                <div class="artist-image">
+                    <img src="assets/images/artist.png" alt="Artist Name">
+                </div>
+                <div class="artist-info">
+                    <h2>About the Artist</h2>
+                    <h3>Krissha Pearl Dela Peña</h3>
+                    <p>Krissha Pearl Dela Peña is a contemporary individual painting artist known for her vibrant abstract works. She is driven by the desire to inspire other young artists to confidently pursue their hobbies and creative passions. Through her art, she explores meaningful themes such as nature, human emotion, and the urban landscape bringing color, energy, and deeper reflection to every piece she creates.</p>
+                    <p>Krissha Pearl Dela Peña’s artworks have been exhibited in Santo Niño, South Cotabato, featuring the theme “Smart Kabataan 2025.” She also joined an art contest organized by World Vision in Isulan, Sultan Kudarat, under the theme “Pinta Kusay,” where she proudly earned 2nd place in 2025.</p>
+                    <p>“Her journey reminds young artists that a simple hobby can grow into a powerful inspiration.”</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <h2>About the Collection</h2>
+                <p>Our curated collection showcases the finest contemporary artworks from emerging and established artists worldwide. Each piece tells a unique story and represents the diverse voices and perspectives that shape today\'s art landscape.</p>
+                <p>From abstract paintings to sculptural installations, our collection spans multiple mediums and styles, offering visitors an immersive journey through contemporary artistic expression.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="contact-content">
+                <h2>Get in Touch</h2>
+                <p>Interested in learning more about our collection or acquiring a piece? We\'d love to hear from you.</p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <h3>Email</h3>
+                        <p>krissha2013@gmail.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>Phone</h3>
+                        <p>+639760926612</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>Location</h3>
+                        <p>9810, Prk. Magsaysay Bai Saripinang Sultan Kudarat</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Art Detail Modal -->
+    <div id="artModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img id="modalImage" src="" alt="">
+                </div>
+                <div class="modal-info">
+                    <h2 id="modalTitle"></h2>
+                    <p id="modalArtist"></p>
+                    <div class="modal-meta">
+                        <div id="modalPrice" class="modal-price"></div>
+                        <span id="modalCategory" class="category-tag"></span>
+                        <span id="modalAvailability" class="availability-tag"></span>
+                    </div>
+                    <div class="modal-details">
+                        <div class="detail-item">
+                            <h4><i class="fas fa-paint-brush" aria-hidden="true"></i>Medium</h4>
+                            <p id="modalMedium"></p>
+                        </div>
+                        <div class="detail-item">
+                            <h4><i class="far fa-calendar-alt" aria-hidden="true"></i>Year</h4>
+                            <p id="modalYear"></p>
+                        </div>
+                        <div class="detail-item">
+                            <h4><i class="fas fa-ruler-combined" aria-hidden="true"></i>Dimensions</h4>
+                            <p id="modalDimensions"></p>
+                        </div>
+                    </div>
+                    <div class="modal-description">
+                        <h4>Description</h4>
+                        <p id="modalDescription"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
