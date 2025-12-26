@@ -483,7 +483,11 @@ function setActiveNavLink() {
 
 // Load theme from local storage
 function loadTheme() {
-    const savedTheme = localStorage.getItem("theme");
+    let savedTheme = localStorage.getItem("theme");
+    if (!savedTheme) {
+        savedTheme = "dark";
+        localStorage.setItem("theme", savedTheme);
+    }
     if (savedTheme === "dark") {
         document.body.classList.add("dark-mode");
         themeToggle.checked = true;
@@ -610,6 +614,5 @@ document.head.appendChild(styleSheet);
 
 // Initialize search functionality
 // addSearchFunctionality(); // Uncomment to enable search
-
 
 
