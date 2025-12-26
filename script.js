@@ -153,23 +153,9 @@ let currentSlide = 0;
 let isCarouselAnimating = false;
 let carouselInterval;
 
-// Helper function to sort artworks by availability (available first)
-function sortArtworksByAvailability(artworks) {
-    // Create a copy to avoid modifying the original array, which is important for filtering
-    const sortedArtworks = [...artworks]; 
-    sortedArtworks.sort((a, b) => {
-        const statusOrder = { "available": 0, "sold": 1 };
-        const aStatus = statusOrder[a.availability] || 99;
-        const bStatus = statusOrder[b.availability] || 99;
-        return aStatus - bStatus; // Ascending sort: 0 (available) comes before 1 (sold)
-    });
-    return sortedArtworks;
-}
-
 // Initialize the gallery
 document.addEventListener("DOMContentLoaded", function() {
-    // Sort the initial artData before displaying
-    displayArtworks(sortArtworksByAvailability(artData));
+    displayArtworks(artData);
     setupEventListeners();
     setupCarousel();
     startCarousel();
@@ -177,11 +163,22 @@ document.addEventListener("DOMContentLoaded", function() {
     loadTheme();
 });
 
-// Display artworks in the gallery
+
+// Display artworks in the gallery sorted by availability
 function displayArtworks(artworks) {
     galleryGrid.innerHTML = "";
     
-    artworks.forEach(artwork => {
+    // Sort artworks: "available" comes before "sold"
+    const sortedArtworks = [...artworks].sort((a, b) => {
+        const statusA = getAvailabilityStatus(a);
+        const statusB = getAvailabilityStatus(b);
+
+        if (statusA === "available" && statusB === "sold") return -1;
+        if (statusA === "sold" && statusB === "available") return 1;
+        return 0; // Maintain original order if status is the same
+    });
+
+    sortedArtworks.forEach(artwork => {
         const artItem = createArtworkElement(artwork);
         galleryGrid.appendChild(artItem);
     });
@@ -229,8 +226,7 @@ function filterArtworks(category) {
         ? artData 
         : artData.filter(artwork => artwork.category === category);
     
-    // Sort the filtered list before displaying
-    displayArtworks(sortArtworksByAvailability(filteredArtworks));
+    displayArtworks(filteredArtworks);
 }
 
 // Open modal with artwork details
