@@ -133,14 +133,6 @@ const artData = [
 
 ];
 
-// Sort the artData array to show 'available' items first, then 'sold' items, as requested by the user.
-artData.sort((a, b) => {
-    const statusOrder = { "available": 0, "sold": 1 };
-    const aStatus = statusOrder[a.availability] || 99;
-    const bStatus = statusOrder[b.availability] || 99;
-    return aStatus - bStatus;
-});
-
 // DOM elements
 const galleryGrid = document.getElementById("galleryGrid");
 const filterButtons = document.querySelectorAll(".filter-btn");
@@ -161,9 +153,23 @@ let currentSlide = 0;
 let isCarouselAnimating = false;
 let carouselInterval;
 
+// Helper function to sort artworks by availability (available first)
+function sortArtworksByAvailability(artworks) {
+    // Create a copy to avoid modifying the original array, which is important for filtering
+    const sortedArtworks = [...artworks]; 
+    sortedArtworks.sort((a, b) => {
+        const statusOrder = { "available": 0, "sold": 1 };
+        const aStatus = statusOrder[a.availability] || 99;
+        const bStatus = statusOrder[b.availability] || 99;
+        return aStatus - bStatus; // Ascending sort: 0 (available) comes before 1 (sold)
+    });
+    return sortedArtworks;
+}
+
 // Initialize the gallery
 document.addEventListener("DOMContentLoaded", function() {
-    displayArtworks(artData);
+    // Sort the initial artData before displaying
+    displayArtworks(sortArtworksByAvailability(artData));
     setupEventListeners();
     setupCarousel();
     startCarousel();
@@ -223,7 +229,8 @@ function filterArtworks(category) {
         ? artData 
         : artData.filter(artwork => artwork.category === category);
     
-    displayArtworks(filteredArtworks);
+    // Sort the filtered list before displaying
+    displayArtworks(sortArtworksByAvailability(filteredArtworks));
 }
 
 // Open modal with artwork details
