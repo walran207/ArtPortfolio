@@ -275,6 +275,37 @@ function setupEventListeners() {
             const category = button.dataset.filter;
             filterArtworks(category);
         });
+
+         // --- Fullscreen Image Logic ---
+        const fsOverlay = document.getElementById("imageFullscreenOverlay");
+        const fsImage = document.getElementById("fullscreenImage");
+        const modalImg = document.getElementById("modalImage");
+        const fsClose = document.querySelector(".fullscreen-close");
+
+        // Open Fullscreen
+        modalImg.addEventListener("click", () => {
+            fsImage.src = modalImg.src;
+            fsOverlay.style.display = "flex";
+        });
+
+        // Close Fullscreen (Clicking 'X' or the background)
+        const closeFullscreen = () => {
+            fsOverlay.style.display = "none";
+        };
+
+        fsClose.addEventListener("click", closeFullscreen);
+        fsOverlay.addEventListener("click", (e) => {
+            if (e.target !== fsImage) {
+                closeFullscreen();
+            }
+        });
+
+        // Close Fullscreen with Escape key
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "Escape" && fsOverlay.style.display === "flex") {
+                closeFullscreen();
+            }
+        });
     });
     
     // Modal close events
