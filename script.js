@@ -139,7 +139,7 @@ const artData = [
         medium: "Acrylic on Canvas",
         year: "2025",
         dimensions: "15\" x 20\"",
-        price: "₱700",
+        price: "₱600",
         description: "This painting features a vivid, multicolored butterfly hovering over a group of bright pink flowers, including a central open blossom. The background uses a striking diagonal gradient of teal and yellow to create a sense of movement and light.",
         availability: "sold" // "available" | "sold"
     },
@@ -152,7 +152,7 @@ const artData = [
         medium: "Acrylic on Canvas",
         year: "2025",
         dimensions: "15\" x 20\"",
-        price: "₱700",
+        price: "₱600",
         description: "A graceful arrangement of five pink tulips reaches upward toward a monarch-style butterfly in the upper right. The soft, glowing yellow light in the corner suggests a warm morning in a garden.",
         availability: "sold" // "available" | "sold"
     },
@@ -178,7 +178,7 @@ const artData = [
         medium: "Acrylic on Canvas",
         year: "2025",
         dimensions: "15\" x 20\"",
-        price: "₱700",
+        price: "",
         description: "This piece is a high-energy abstract composition dominated by fiery reds, oranges, and deep blacks with geometric caution striped elements. It features stylized floral shapes and the words V-PLOT and NEON integrated into the dynamic, textured design.",
         availability: "collection" // "available" | "sold"
     }
