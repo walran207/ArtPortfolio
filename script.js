@@ -129,7 +129,60 @@ const artData = [
         price: "₱700",
         description: "Pink lotus flowers and buds rise gently above broad green leaves in a calm, natural setting.",
         availability: "sold" // "available" | "sold"
+    },
+        {
+        id: 11,
+        title: "The Butterfly and the Bloom",
+        artist: "Krissha Pearl Dela Peña",
+        category: "floral",
+        image: "assets/images/art-11.jpg",
+        medium: "Acrylic on Canvas",
+        year: "2025",
+        dimensions: "15\" x 20\"",
+        price: "₱700",
+        description: "This painting features a vivid, multicolored butterfly hovering over a group of bright pink flowers, including a central open blossom. The background uses a striking diagonal gradient of teal and yellow to create a sense of movement and light.",
+        availability: "sold" // "available" | "sold"
+    },
+        {
+        id: 12,
+        title: "Tulips in the Sun",
+        artist: "Krissha Pearl Dela Peña",
+        category: "floral",
+        image: "assets/images/art-12.jpg",
+        medium: "Acrylic on Canvas",
+        year: "2025",
+        dimensions: "15\" x 20\"",
+        price: "₱700",
+        description: "A graceful arrangement of five pink tulips reaches upward toward a monarch-style butterfly in the upper right. The soft, glowing yellow light in the corner suggests a warm morning in a garden.",
+        availability: "sold" // "available" | "sold"
+    },
+        {
+        id: 13,
+        title: "Still Life with Patterned Vase",
+        artist: "Krissha Pearl Dela Peña",
+        category: "floral",
+        image: "assets/images/art-13.jpg",
+        medium: "Acrylic on Canvas",
+        year: "2025",
+        dimensions: "15\" x 20\"",
+        price: "₱2,500",
+        description: "A lush and colorful bouquet of various flowers—daisies, zinnias, and lilies—is arranged in an intricately detailed brown vase. The vase stands out with its traditional woven-style pattern, set against a calm, earthy green and gold background.",
+        availability: "available" // "available" | "sold"
+    },
+        {
+        id: 14,
+        title: "Abstract Neon V-Plot",
+        artist: "Krissha Pearl Dela Peña",
+        category: "abstract",
+        image: "assets/images/art-14.jpg",
+        medium: "Acrylic on Canvas",
+        year: "2025",
+        dimensions: "15\" x 20\"",
+        price: "₱700",
+        description: "This piece is a high-energy abstract composition dominated by fiery reds, oranges, and deep blacks with geometric caution striped elements. It features stylized floral shapes and the words V-PLOT and NEON integrated into the dynamic, textured design.",
+        availability: "collection" // "available" | "sold"
     }
+
 
 ];
 
@@ -155,6 +208,7 @@ let carouselInterval;
 
 // Initialize the gallery
 document.addEventListener("DOMContentLoaded", function() {
+    initClientCarousel();
     displayArtworks(artData);
     setupEventListeners();
     setupCarousel();
@@ -172,10 +226,9 @@ function displayArtworks(artworks) {
     const sortedArtworks = [...artworks].sort((a, b) => {
         const statusA = getAvailabilityStatus(a);
         const statusB = getAvailabilityStatus(b);
-
-        if (statusA === "available" && statusB === "sold") return -1;
-        if (statusA === "sold" && statusB === "available") return 1;
-        return 0; // Maintain original order if status is the same
+        
+        const priority = { "collection": 1, "available": 2, "sold": 3 };
+        return priority[statusA] - priority[statusB];
     });
 
     sortedArtworks.forEach(artwork => {
@@ -533,17 +586,20 @@ function capitalizeFirst(str) {
 }
 
 function getAvailabilityStatus(artwork) {
-    const raw =
-        artwork?.availability ?? artwork?.status ?? artwork?.availabilityStatus ?? "";
+    const raw = artwork?.availability ?? artwork?.status ?? artwork?.availabilityStatus ?? "";
     const normalized = String(raw).trim().toLowerCase();
 
     if (artwork?.sold === true) return "sold";
+    // Add check for collection
+    if (normalized === "collection") return "collection"; 
     if (normalized === "sold" || normalized === "unavailable" || normalized === "not available") return "sold";
     return "available";
 }
 
 function getAvailabilityLabel(status) {
-    return status === "sold" ? "Sold" : "Available";
+    if (status === "sold") return "Sold";
+    if (status === "collection") return "Collection"; // New Label
+    return "Available";
 }
 
 // Add loading animation for images
@@ -593,6 +649,99 @@ function addSearchFunctionality() {
             artwork.category.toLowerCase().includes(searchTerm)
         );
         displayArtworks(filteredArtworks);
+    });
+}
+
+// ==========================================
+// CLIENTS 3D CAROUSEL LOGIC
+// ==========================================
+
+// 1. Client Data (Replace placeholder images with real client images)
+// Using placeholder.com for demonstration so it works immediately.
+const clientData = [
+    { id: 1, image: "https://via.placeholder.com/300x400/C70039/ffffff?text=World+Vision" },
+    { id: 2, image:  "https://via.placeholder.com/300x400/900C3F/ffffff?text=Smart+Kabataan" },
+    { id: 3, image: "assets/images/client-1.jpg" }
+
+];
+
+const clientTrack = document.getElementById('clientTrack');
+const clientPrevBtn = document.querySelector('.client-nav.prev');
+const clientNextBtn = document.querySelector('.client-nav.next');
+let currentClientIndex = 2; // Start in the middle (index 2 out of 5 items)
+
+// 2. Initialize Carousel
+function initClientCarousel() {
+    if (!clientTrack || clientData.length === 0) return;
+
+    // Clear existing content
+    clientTrack.innerHTML = '';
+
+    // Generate slides
+    clientData.forEach((client, index) => {
+        const slide = document.createElement('div');
+        slide.className = 'client-slide';
+        // Store index for easy reference later
+        slide.dataset.index = index; 
+        slide.innerHTML = `<img src="${client.image}" alt="Client ${client.id}">`;
+        clientTrack.appendChild(slide);
+    });
+
+    // Apply initial 3D positions
+    updateClientCarouselPositions();
+}
+
+// 3. Update Positions (The Core 3D Logic)
+function updateClientCarouselPositions() {
+    const slides = document.querySelectorAll('.client-slide');
+    const totalSlides = slides.length;
+
+    slides.forEach((slide) => {
+        const slideIndex = parseInt(slide.dataset.index);
+
+        // Remove all positioning classes first
+        slide.classList.remove('is-center', 'is-left', 'is-right', 'is-hidden-left', 'is-hidden-right');
+
+        // Calculate positions using modulo arithmetic for wrap-around logic
+        const prevIndex = (currentClientIndex - 1 + totalSlides) % totalSlides;
+        const nextIndex = (currentClientIndex + 1) % totalSlides;
+
+        if (slideIndex === currentClientIndex) {
+            slide.classList.add('is-center');
+        } 
+        else if (slideIndex === prevIndex) {
+            slide.classList.add('is-left');
+        } 
+        else if (slideIndex === nextIndex) {
+            slide.classList.add('is-right');
+        } 
+        // Decide where the other slides hide based on relative position
+        else {
+             // Complex logic to determine if it should hide left or right
+             // Calculate distance considering wrap-around
+             let distance = slideIndex - currentClientIndex;
+             if (distance > totalSlides / 2) distance -= totalSlides;
+             if (distance < -totalSlides / 2) distance += totalSlides;
+
+             if (distance < 0) {
+                 slide.classList.add('is-hidden-left');
+             } else {
+                 slide.classList.add('is-hidden-right');
+             }
+        }
+    });
+}
+
+// 4. Event Listeners for Navigation
+if (clientPrevBtn && clientNextBtn) {
+    clientPrevBtn.addEventListener('click', () => {
+        currentClientIndex = (currentClientIndex - 1 + clientData.length) % clientData.length;
+        updateClientCarouselPositions();
+    });
+
+    clientNextBtn.addEventListener('click', () => {
+        currentClientIndex = (currentClientIndex + 1) % clientData.length;
+        updateClientCarouselPositions();
     });
 }
 
