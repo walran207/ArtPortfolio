@@ -69,7 +69,7 @@ const artData = [
         id: 6,
         title: "Riverside Serenity",
         artist: "Krissha Pearl Dela Peña",
-        category: "Acrylic on Canvas",
+        category: "landscape",
         image: "assets/images/art-6.jpg",
         medium: "Digital Photography",
         year: "2025",
