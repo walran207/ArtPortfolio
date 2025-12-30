@@ -299,7 +299,15 @@ function openModal(artwork) {
     const modalAvailability = document.getElementById("modalAvailability");
     if (modalAvailability) {
         modalAvailability.textContent = getAvailabilityLabel(availability);
-        modalAvailability.classList.remove("availability-tag--sold", "availability-tag--available");
+        
+        // REMOVE ALL THREE potential status classes to prevent color "leaking"
+        modalAvailability.classList.remove(
+            "availability-tag--sold", 
+            "availability-tag--available", 
+            "availability-tag--collection"
+        );
+        
+        // Add the correct new class
         modalAvailability.classList.add(`availability-tag--${availability}`);
     }
 

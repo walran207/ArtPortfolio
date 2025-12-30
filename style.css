@@ -114,14 +114,19 @@ body.dark-mode .category-tag {
     background: #e67e22;
 }
 
+/* Base Colors for Dark Mode */
+body.dark-mode .availability-pill--available,
 body.dark-mode .availability-tag--available {
-    background: #2ecc71;
+    background: #2ecc71 !important; /* Brighter green */
 }
 
+body.dark-mode .availability-pill--sold,
 body.dark-mode .availability-tag--sold {
-    background: #ff6b6b;
+    background: #ff6b6b !important; /* Brighter red */
     color: #1a1a1a;
 }
+
+
 
 body.dark-mode .artist-info h3,
 body.dark-mode .contact-item h3 {
@@ -594,14 +599,14 @@ input:checked + .slider .moon-icon {
     flex-shrink: 0;
 }
 
-.availability-pill--available {
-    background: #27ae60;
+.availability-pill--available, .availability-tag--available {
+    background: #27ae60 !important; /* Forces green */
     color: #fff;
 }
 
-.availability-pill--sold {
-    background: #ff6b6b;
-    color: #1a1a1a;
+.availability-pill--sold, .availability-tag--sold {
+    background: #c0392b !important; /* Forces red */
+    color: #fff;
 }
 
 .art-item.is-sold .art-image {
@@ -962,17 +967,15 @@ input:checked + .slider .moon-icon {
 }
 
 /* Light Mode Styles */
-.availability-pill--collection,
-.availability-tag--collection {
-    background: #3498db; /* A nice blue color */
+.availability-pill--collection, .availability-tag--collection {
+    background: #3498db !important; /* Forces blue */
     color: #fff;
 }
 
 /* Dark Mode Styles (Add this inside your body.dark-mode section) */
-body.dark-mode .availability-tag--collection,
-body.dark-mode .availability-pill--collection {
-    background: #2980b9;
-    color: #ffffff;
+body.dark-mode .availability-pill--collection,
+body.dark-mode .availability-tag--collection {
+    background: #2980b9 !important; /* Darker blue */
 }
 
 /* --- Clients 3D Carousel Section --- */
