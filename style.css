@@ -1347,6 +1347,12 @@ body.dark-mode .client-nav:hover {
     }
 }
 
+@media screen and (max-width: 1024px) {
+    .nav-menu {
+        gap: 1rem; /* Slightly reduce gap if the menu is too wide */
+    }
+}
+
 /* Smooth scrolling */
 html {
     scroll-behavior: smooth;
