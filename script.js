@@ -171,7 +171,7 @@ const artData = [
     },
         {
         id: 14,
-        title: "Abstract Neon V-Plot",
+        title: "Xeon & Agnus",
         artist: "Krissha Pearl Dela Peña",
         category: "abstract",
         image: "assets/images/art-14.jpg",
@@ -179,7 +179,7 @@ const artData = [
         year: "2025",
         dimensions: "15\" x 20\"",
         price: "",
-        description: "This piece is a high-energy abstract composition dominated by fiery reds, oranges, and deep blacks with geometric caution striped elements. It features stylized floral shapes and the words V-PLOT and NEON integrated into the dynamic, textured design.",
+        description: "This vibrant abstract painting is a meaningful gift from Meg (Agnus) to her high school friend Krissha (Xeon), the owner of this website. The artwork celebrates their long-standing friendship and the shared joy of playing the Roblox game Grow a Garden together.",
         availability: "collection" // "available" | "sold"
     }
 
