@@ -169,7 +169,7 @@ const artData = [
         description: "A lush and colorful bouquet of various flowers—daisies, zinnias, and lilies—is arranged in an intricately detailed brown vase. The vase stands out with its traditional woven-style pattern, set against a calm, earthy green and gold background.",
         availability: "available" // "available" | "sold"
     },
-        {
+    {
         id: 14,
         title: "Xeon & Agnus",
         artist: "Krissha Pearl Dela Peña",
@@ -181,7 +181,194 @@ const artData = [
         price: "",
         description: "This vibrant abstract painting is a meaningful gift from Meg (Agnus) to her high school friend Krissha (Xeon), the owner of this website. The artwork celebrates their long-standing friendship and the shared joy of playing the Roblox game Grow a Garden together.",
         availability: "collection" // "available" | "sold"
-    }
+    },
+    {
+        id: 15,
+        title: "Wildflowers in Glass Vase",
+        artist: "Krissha Pearl Dela Peña",
+        category: "floral",
+        image: "assets/images/art-15.jpg",
+        medium: "Acrylic on Canvas",
+        year: "2025",
+        dimensions: "10\" x 15\"",
+        price: "₱600",
+        description: "An acrylic still life painting showing a cheerful bouquet of white, pink, purple, and yellow daisies and other wildflowers in a clear glass vase. The background is a gradient of green and yellow, with some fallen petals on the surface below.",
+        availability: "sold" // "available" | "sold"
+    },
+        {
+        id: 16,
+        title: "Basket of Vibrant Roses",
+        artist: "Krissha Pearl Dela Peña",
+        category: "floral",
+        image: "assets/images/art-16.jpg",
+        medium: "Acrylic on Canvas",
+        year: "2025",
+        dimensions: "10\" x 15\"",
+        price: "₱600",
+        description: "An acrylic painting depicting a woven basket overflowing with red, pink, and yellow roses and green leaves. The background is a soft, warm blend of yellow, orange, and pink hues with a bokeh effect.",
+        availability: "sold" // "available" | "sold"
+    },
+    {
+        id: 17,
+        title: "Hydrangea and Lupine Arrangement",
+        artist: "Krissha Pearl Dela Peña",
+        category: "floral",
+        image: "assets/images/art-17.jpg",
+        medium: "Acrylic on Canvas",
+        year: "2025",
+        dimensions: "10\" x 15\"",
+        price: "₱600",
+        description: "A still life painting featuring a lush arrangement of blue, pink, and white hydrangeas, along with tall stalks of purple, pink, and yellow lupines in a dark grey vase. The background is a soft blend of blue, green, and purple.",
+        availability: "sold" // "available" | "sold"
+    },
+        {
+        id: 18,
+        title: "Acrylic Daisy Painting for Sale",
+        artist: "Krissha Pearl Dela Peña",
+        category: "floral",
+        image: "assets/images/art-18.jpg",
+        medium: "Acrylic on Canvas",
+        year: "2025",
+        dimensions: "10\" x 15\"",
+        price: "₱600",
+        description: "A photograph of an acrylic painting displayed for sale, showing a bouquet of colorful daisies in a clear vase. A pink price tag attached to the top left corner indicates it is a 20x15 acrylic painting priced at 2,300.",
+        availability: "sold" // "available" | "sold"
+    },
+            {
+        id: 19,
+        title: "Double Doghouse Delight",
+        artist: "Krissha Pearl Dela Peña",
+        category: "wildlife",
+        image: "assets/images/art-19.jpg",
+        medium: "Acrylic on Canvas",
+        year: "2025",
+        dimensions: "15\" x 20\"",
+        price: "₱2000",
+        description: "An acrylic painting featuring two dogs, a small terrier mix and a fluffy white dog, relaxing inside a large wooden doghouse with a blue roof. The doghouse is situated in a green, grassy field with wildflowers and a scenic landscape in the background.",
+        availability: "sold" // "available" | "sold"
+    },
+    {
+        id: 20,
+        title: "Coco's Portrait",
+        artist: "Krissha Pearl Dela Peña",
+        category: "wildlife",
+        image: "assets/images/art-20.jpg",
+        medium: "Acrylic on Canvas",
+        year: "2025",
+        dimensions: "15\" x 20\"",
+        price: "₱1500",
+        description: "A portrait painting of a large, fluffy white dog named COCO lying on a green lawn. Behind the dog is its personalized wooden doghouse with a black roof, under a blue sky with clouds.",
+        availability: "sold" // "available" | "sold"
+    },
+    {
+        id: 21,
+        title: "Bouquet in a Blue Vase",
+        artist: "Krissha Pearl Dela Peña",
+        category: "floral",
+        image: "assets/images/art-21.jpg",
+        medium: "Acrylic on Canvas",
+        year: "2025",
+        dimensions: "10\" x 15\"",
+        price: "₱600",
+        description: "A symphony of petals in every hue dancing from a deep blue vase, celebrating the wild and colorful energy of summer.",
+        availability: "sold" // "available" | "sold"
+    },
+    {
+        id: 22,
+        title: "Roses and Butterfly",
+        artist: "Krissha Pearl Dela Peña",
+        category: "floral",
+        image: "assets/images/art-22.jpg",
+        medium: "Acrylic on Canvas",
+        year: "2025",
+        dimensions: "10\" x 15\"",
+        price: "₱600",
+        description: "A delicate visitor pausing for a secret conversation with three radiant roses, frozen in a warm, sun-kissed afternoon.",
+        availability: "sold" // "available" | "sold"
+    },
+        {
+        id: 23,
+        title: "Trio of Blooms with Butterfly",
+        artist: "Krissha Pearl Dela Peña",
+        category: "floral",
+        image: "assets/images/art-23.jpg",
+        medium: "Acrylic on Canvas",
+        year: "2025",
+        dimensions: "10\" x 15\"",
+        price: "₱600",
+        description: "Bold, rhythmic blooms in fiery yellow and deep magenta reach upward, inviting a passing butterfly into their vibrant world.",
+        availability: "sold" // "available" | "sold"
+    },
+    {
+        id: 24,
+        title: "Sepia Dream of a Pegasus",
+        artist: "Krissha Pearl Dela Peña",
+        category: "classical",
+        image: "assets/images/art-24.jpg",
+        medium: "Acrylic on Canvas",
+        year: "2025",
+        dimensions: "15\" x 20\"",
+        price: "",
+        description: "An ethereal scene where a mythic Pegasus gallops through a sky of coffee-toned clouds and shimmering stars.",
+        availability: "collection" // "available" | "sold"
+    },
+        {
+        id: 25,
+        title: "Uncle Sam Recruitment",
+        artist: "Krissha Pearl Dela Peña",
+        category: "portrait",
+        image: "assets/images/art-25.jpg",
+        medium: "Acrylic on Canvas",
+        year: "2025",
+        dimensions: "15\" x 20\"",
+        price: "",
+        description: "A vibrant, hand-painted tribute to iconic history, capturing the stern and unwavering spirit of an American classic.",
+        availability: "collection" // "available" | "sold"
+    },
+     {
+        id: 26,
+        title: "Graphic Mona Lisa",
+        artist: "Krissha Pearl Dela Peña",
+        category: "classical",
+        image: "assets/images/art-26.jpg",
+        medium: "Acrylic on Canvas",
+        year: "2025",
+        dimensions: "15\" x 20\"",
+        price: "",
+        description: "A modern, geometric reimagining of the world's most famous smile, framed by bold lines and a striking blue horizon.",
+        availability: "collection" // "available" | "sold"
+    },
+    {
+        id: 27,
+        title: "The Spirit of Challe Fen Challe",
+        artist: "Krissha Pearl Dela Peña",
+        category: "classical",
+        image: "assets/images/art-27.jpg",
+        medium: "Acrylic on Canvas",
+        year: "2025",
+        dimensions: "15\" x 20\"",
+        price: "",
+        description: "A high-energy anime portrait where the flash of a warrior's blade meets a whirlwind of glowing emerald energy.",
+        availability: "collection" // "available" | "sold"
+    },
+    {
+        id: 28,
+        title: "Vibrant Echoes",
+        artist: "Krissha Pearl Dela Peña",
+        category: "floral",
+        image: "assets/images/art-28.jpg",
+        medium: "Acrylic on Canvas",
+        year: "2025",
+        dimensions: "20\" x 15\"",
+        price: "₱2200",
+        description: "A bold, high-contrast floral study featuring a vivid bouquet in a pink amphora, set against a deep midnight backdrop..",
+        availability: "sold" // "available" | "sold"
+    },
+
+
+
+
+
 
 
 ];
@@ -667,9 +854,12 @@ function addSearchFunctionality() {
 // 1. Client Data (Replace placeholder images with real client images)
 // Using placeholder.com for demonstration so it works immediately.
 const clientData = [
-    { id: 1, image: "https://via.placeholder.com/300x400/C70039/ffffff?text=World+Vision" },
-    { id: 2, image:  "https://via.placeholder.com/300x400/900C3F/ffffff?text=Smart+Kabataan" },
-    { id: 3, image: "assets/images/client-1.jpg" }
+    { id: 1, image: "assets/images/client-2.jpg" },
+    { id: 2, image:  "assets/images/client-3.jpg" },
+    { id: 3, image: "assets/images/client-1.jpg" },
+    { id: 3, image: "assets/images/client-4.jpg" },
+    { id: 3, image: "assets/images/client-5.jpg" },
+    { id: 3, image: "assets/images/client-6.jpg" }
 
 ];
 
